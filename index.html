@@ -193,6 +193,55 @@
     box-shadow: 0 2px 10px rgba(13,23,48,0.05);
   }
   .t-card .quote{ font-size:0.98rem; color:var(--ink); }
+
+  /* ---------- IDEAS (16 個網站構思) ---------- */
+  .ideas-section{ padding: 10px 0 44px; }
+  .idea-category{
+    background: var(--paper);
+    border-radius:16px;
+    margin-bottom:14px;
+    box-shadow: 0 2px 10px rgba(13,23,48,0.05);
+    overflow:hidden;
+  }
+  .idea-category summary{
+    list-style:none;
+    cursor:pointer;
+    padding:20px 22px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-weight:700;
+    color:var(--berry);
+  }
+  .idea-category summary::-webkit-details-marker{ display:none; }
+  .idea-category summary .ic-emoji{ font-size:1.4rem; flex:0 0 auto; }
+  .idea-category summary .ic-text{ flex:1 1 auto; }
+  .idea-category summary .ic-text .ic-title{ font-size:1.05rem; }
+  .idea-category summary .ic-text .ic-sub{
+    display:block; margin-top:2px; font-weight:400; font-size:0.85rem; color:#7a8494;
+  }
+  .idea-category summary .ic-chevron{
+    flex:0 0 auto; width:22px; height:22px; border-radius:50%;
+    background: rgba(20,168,159,0.12); color:var(--rose);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.85rem; transition: transform 0.2s ease;
+  }
+  .idea-category[open] summary .ic-chevron{ transform: rotate(180deg); }
+  .idea-grid{
+    padding: 0 22px 22px;
+    display:grid;
+    gap:14px;
+  }
+  .idea-card{
+    background: #f7fafa;
+    border-radius:12px;
+    padding:16px 18px;
+    border-left: 3px solid var(--rose);
+  }
+  .idea-card .idea-emoji{ font-size:1.2rem; }
+  .idea-card h4{ margin:6px 0 4px; color:var(--berry); font-size:0.98rem; }
+  .idea-card p{ margin:0; color:#5c4c47; font-size:0.88rem; }
+
   .t-card .who{
     margin-top:12px; display:flex; align-items:center; gap:10px;
   }
@@ -321,6 +370,10 @@
     .speaker-card{ padding: 34px 40px; }
     .avatar{ width:76px; height:76px; font-size:1.5rem; }
 
+    /* Ideas: 2-column grid of idea cards within each open category */
+    .ideas-section{ padding: 16px 0 60px; }
+    .idea-grid{ grid-template-columns: 1fr 1fr; }
+
     /* Testimonials: 3-column grid */
     .testimonials{ padding: 16px 0 64px; }
     .section-label h2{ font-size:1.8rem; }
@@ -358,8 +411,8 @@
       <h1>唔識寫程式？<br><em>兩小時後</em>，你會有一個屬於自己嘅網頁。</h1>
       <p class="sub">Vibe Coding 工作坊 · 零技術背景 · Chandler's Ford Library, SO53 2LH<br>與「Hong Kong Connections 香港人聚會」同一社群精神——相聚、互助、共同成長</p>
       <div class="cta-wrap" style="margin:26px 0 0;">
-        <a href="#lead-form" class="cta-btn">免費留位 · 11月8日</a>
-        <div class="cta-sub">完全免費，毋須任何經驗</div>
+        <a href="#lead-form" class="cta-btn">免費攞《兩小時建站行動計劃》</a>
+        <div class="cta-sub">出席便可，完全免費，毋須任何經驗</div>
       </div>
     </div>
   </div>
@@ -405,8 +458,151 @@
       </div>
 
       <div class="cta-wrap">
-        <a href="#lead-form" class="cta-btn">免費留位 · 11月8日</a>
+        <a href="#lead-form" class="cta-btn">免費攞《兩小時建站行動計劃》</a>
       </div>
+    </div>
+  </div>
+
+  <!-- IDEAS: 16 個網站構思 -->
+  <div class="ideas-section">
+    <div class="wrap">
+      <div class="section-label">
+        <span>俾你啲靈感</span>
+        <h2>16 個網站構思，啱晒 BNO 家庭</h2>
+      </div>
+
+      <details class="idea-category" open>
+        <summary>
+          <span class="ic-emoji">🚪</span>
+          <span class="ic-text">
+            <span class="ic-title">一頁網站</span>
+            <span class="ic-sub">你嘅數碼大門——一頁就俾人留深刻印象</span>
+          </span>
+          <span class="ic-chevron">▾</span>
+        </summary>
+        <div class="idea-grid">
+          <div class="idea-card">
+            <div class="idea-emoji">🛍️</div>
+            <h4>小生意主頁</h4>
+            <p>展示你嘅家庭烘焙、補習或手作——附上價錢同 WhatsApp 掣，就係你嘅網上「舖頭」。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">📚</div>
+            <h4>課程 / 新書發佈</h4>
+            <p>推廣你嘅工作坊、網上課程或自資出版嘅書——附上簡介、好評同報名掣。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">💼</div>
+            <h4>自由職業服務</h4>
+            <p>列出你嘅技能同時間表——清潔、補習、翻譯或照顧服務，等客人容易搵到你。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🏠</div>
+            <h4>出租物業</h4>
+            <p>展示出租房間或度假單位——附相片、特色、租金同查詢表，唔使再周圍轉發。</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="idea-category">
+        <summary>
+          <span class="ic-emoji">📖</span>
+          <span class="ic-text">
+            <span class="ic-title">個人網站</span>
+            <span class="ic-sub">你嘅故事、你所愛、你所信</span>
+          </span>
+          <span class="ic-chevron">▾</span>
+        </summary>
+        <div class="idea-grid">
+          <div class="idea-card">
+            <div class="idea-emoji">🍳</div>
+            <h4>家傳食譜集</h4>
+            <p>保存珍貴嘅家鄉菜食譜——連相片同背後嘅故事，係留畀孫仔孫女嘅數碼傳家寶。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🌸</div>
+            <h4>花園日誌</h4>
+            <p>記錄你嘅植物同季節變化——一本靚靚嘅成長日記，同其他園藝愛好者分享。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">📖</div>
+            <h4>我的人生故事</h4>
+            <p>記低你嘅童年、人生里程碑同信念——用自己嘅文字，留低屬於你嘅傳承。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🌍</div>
+            <h4>旅行回憶頁</h4>
+            <p>一本旅遊日記——附上目的地相片、故事同心得，記錄你去過同愛過嘅地方。</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="idea-category">
+        <summary>
+          <span class="ic-emoji">🤝</span>
+          <span class="ic-text">
+            <span class="ic-title">社群網站</span>
+            <span class="ic-sub">凝聚身邊人——教會、慈善、家庭同社區</span>
+          </span>
+          <span class="ic-chevron">▾</span>
+        </summary>
+        <div class="idea-grid">
+          <div class="idea-card">
+            <div class="idea-emoji">⛪</div>
+            <h4>教會 / 團契</h4>
+            <p>公佈聚會時間、活動、地點同講道錄音——為你嘅會眾建立一個溫暖嘅數碼家。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">💗</div>
+            <h4>事工 / 慈善機構</h4>
+            <p>分享你嘅使命、影響力故事、代禱事項同奉獻連結——支持你嘅信仰事工或慈善事業。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">👨‍👩‍👧</div>
+            <h4>家庭專頁</h4>
+            <p>一個私人告示板，分享公告同聯絡方式——即使分隔各城市各國家，都保持聯繫。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🎉</div>
+            <h4>活動邀請</h4>
+            <p>為生日、聚會或社區飯局做一張精美嘅數碼邀請卡——附詳情、地圖同回覆連結。</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="idea-category">
+        <summary>
+          <span class="ic-emoji">🧰</span>
+          <span class="ic-text">
+            <span class="ic-title">迷你網頁工具</span>
+            <span class="ic-sub">會做嘢嘅小工具——計數、追蹤、提醒</span>
+          </span>
+          <span class="ic-chevron">▾</span>
+        </summary>
+        <div class="idea-grid">
+          <div class="idea-card">
+            <div class="idea-emoji">💊</div>
+            <h4>服藥提醒表</h4>
+            <p>食咗一種藥就剔一剔——每朝重設嘅日常清單，加埋溫馨提示。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🩺</div>
+            <h4>血壓記錄表</h4>
+            <p>記低每日讀數，睇到幾星期嘅簡單走勢圖——方便同醫生分享。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">💷</div>
+            <h4>家庭預算表</h4>
+            <p>按分類記低收入同支出，睇到每月總結——清楚睇到啲錢使咗去邊。</p>
+          </div>
+          <div class="idea-card">
+            <div class="idea-emoji">🎯</div>
+            <h4>每日習慣追蹤</h4>
+            <p>追蹤最多五個日常習慣——散步、祈禱、閱讀、飲水、瞓覺——連續達成仲有紀錄。</p>
+          </div>
+        </div>
+      </details>
+
     </div>
   </div>
 
@@ -451,7 +647,7 @@
 
       <div class="proof-numbers">
         <div><div class="num">50+</div><div class="label">已完成學員</div></div>
-        <div><div class="num">3</div><div class="label">堂已舉行</div></div>
+        <div><div class="num">4</div><div class="label">堂已舉行</div></div>
         <div><div class="num">$0</div><div class="label">完全免費</div></div>
       </div>
     </div>
@@ -461,7 +657,7 @@
   <div class="form-section" id="lead-form">
     <div class="wrap">
       <span class="eyebrow">下一步，好簡單</span>
-      <h2>留低資料，幫你留位</h2>
+      <h2>留低資料，即刻攞你嘅免費「兩小時建站行動計劃」</h2>
       <p class="info">11月8日（星期日）上午10:30 · Chandler's Ford Library, SO53 2LH · 免費</p>
       <div class="info-pills">
         <span>📅 2026年11月8日</span>
@@ -480,9 +676,9 @@
         <label for="goal">你最想用網頁做咩？</label>
         <textarea id="goal" placeholder="例：想整個網頁分享我嘅家鄉菜食譜"></textarea>
 
-        <button type="submit">免費留位</button>
+        <button type="submit">免費攞行動計劃</button>
       </form>
-      <p class="form-note">完全免費，毋須任何承諾 · 我哋只會用嚟聯絡你有關工作坊嘅事宜</p>
+      <p class="form-note">出席便可，唔使報名亦唔使留位 · 我哋只會用嚟聯絡你有關行動計劃同工作坊嘅事宜</p>
     </div>
   </div>
 
