@@ -44,7 +44,7 @@ CSS 採用 mobile-first 寫法：
 
 - 日期：2026年11月8日（星期日）
 - 時間：上午10:30
-- 地點：Southampton 本地舉行
+- 地點：Chandler's Ford Library, Oakmount Road, Chandler's Ford, Eastleigh, SO53 2LH
 - 費用：完全免費
 
 如活動資訊有變，請搜尋並更新以下位置：
