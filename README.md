@@ -14,13 +14,15 @@ index.html   # 單一 HTML 檔案，包含所有 CSS 同內容（圖片以 base6
 
 ## 頁面結構
 
-- **Hero** — 標題、副標題、CTA 按鈕
+- **Hero** — 標題、副標題、CTA 按鈕、社會證明數字（50+ 學員 · 4 堂 · $0）、名額 + 倒數提示
 - **Pain / 探索** — 引導訪客諗吓自己整到網頁可以用嚟做咩
-- **Benefits** — 四個學員將帶走嘅好處
+- **Benefits** — 四個學員將帶走嘅好處 + CTA（呼應 16 個構思）
+- **Ideas** — 16 個網站構思（4 大分類，`<details>` 摺疊式）
 - **Speaker** — 導師介紹（Ambrose Cheng）
-- **Testimonials** — 學員心聲 + 數字佐證
-- **Lead Form** — 留位表格（前端 demo，未連接後端）
+- **Testimonials** — 學員心聲
+- **Lead Form** — 留位表格（前端 demo，未連接後端），表格上方有黃先生見證卡做最後推力
 - **Footer** — 天際線 banner 圖 + 經文
+- **Sticky CTA**（手機版）
 
 ## 設計系統
 
@@ -48,13 +50,18 @@ CSS 採用 mobile-first 寫法：
 - 費用：完全免費
 
 如活動資訊有變，請搜尋並更新以下位置：
-- Hero / Benefits / Sticky CTA 嘅 CTA 按鈕文字（`免費留位 · 11月8日`）
+- 全站 CTA 按鈕文字（`免費攞《兩小時建站行動計劃》`，Hero / Benefits / Sticky CTA 三處已統一，改一處要三處都改）
 - Lead Form 嘅 `<p class="info">` 同 `.info-pills`
+- Hero 同 Lead Form 嘅名額/緊迫性文字（`Chandler's Ford Library 場地得 20 個位`）
+- 倒數天數 `<script>` 入面嘅 `target = new Date('2026-11-08T00:00:00')`（同 Hero 顯示嘅日子要一致，否則倒數會計錯）
 
 ## 開發備註
 
 - 天際線圖片已經 crop 走頂部空白，以 base64 內嵌喺 `.footer-banner` 嘅 `<img>` tag 入面
 - 表格提交只係前端 demo（`onsubmit` 改變按鈕文字），未連接任何後端／API
+- Lead Form 用 **電郵地址**（`type="email"`）收集聯絡方式，唔再用電話／WhatsApp
+- 「你最想用網頁做咩？」改為非必填下拉選單（`<select>`），對應 16 個構思分類，降低填表門檻
+- 頁面底部有一段 vanilla JS，用嚟計算並顯示距離活動日期仲有幾多日（`#days-left`）；除此之外全站冇任何 JS framework 或外部依賴
 - 所有文案為繁體中文（粵語口語），如需英文版本須另行翻譯
 
 ## 如何本機預覽
