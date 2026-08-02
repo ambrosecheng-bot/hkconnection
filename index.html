@@ -412,7 +412,15 @@
       <p class="sub">Vibe Coding 工作坊 · 零技術背景 · Chandler's Ford Library, SO53 2LH<br>與「Hong Kong Connections 香港人聚會」同一社群精神——相聚、互助、共同成長</p>
       <div class="cta-wrap" style="margin:26px 0 0;">
         <a href="#lead-form" class="cta-btn">免費攞《兩小時建站行動計劃》</a>
-        <div class="cta-sub">出席便可，完全免費，毋須任何經驗</div>
+        <div class="cta-sub">等你今晚就有個屬於自己嘅網頁 —— 就好似陳太個食譜網咁<br>提早攞定行動計劃，等你嚟到工作坊嗰陣，可以一坐低就開始，唔使由零諗起</div>
+      </div>
+      <div class="proof-numbers" style="margin-top:22px;">
+        <div><div class="num">50+</div><div class="label">已完成學員</div></div>
+        <div><div class="num">4</div><div class="label">堂已舉行</div></div>
+        <div><div class="num">$0</div><div class="label">完全免費</div></div>
+      </div>
+      <div style="margin-top:14px; font-size:0.85rem; color:#b5482f; font-weight:700;">
+        Chandler's Ford Library 場地得 20 個位，額滿即止 · 距離 11月8日仲有 <span id="days-left">—</span> 日
       </div>
     </div>
   </div>
@@ -459,6 +467,7 @@
 
       <div class="cta-wrap">
         <a href="#lead-form" class="cta-btn">免費攞《兩小時建站行動計劃》</a>
+        <div class="cta-sub">已經有 16 個構思等緊你揀，仲等咩？</div>
       </div>
     </div>
   </div>
@@ -645,11 +654,6 @@
         <div class="who"><div class="initial">李</div><div class="name">李女士 · 第三堂學員</div></div>
       </div>
 
-      <div class="proof-numbers">
-        <div><div class="num">50+</div><div class="label">已完成學員</div></div>
-        <div><div class="num">4</div><div class="label">堂已舉行</div></div>
-        <div><div class="num">$0</div><div class="label">完全免費</div></div>
-      </div>
     </div>
   </div>
 
@@ -658,7 +662,9 @@
     <div class="wrap">
       <span class="eyebrow">下一步，好簡單</span>
       <h2>留低資料，即刻攞你嘅免費「兩小時建站行動計劃」</h2>
+      <p class="info" style="margin-bottom:6px;">預先準備，等你工作坊當日一坐低就即刻可以開工——唔使由零開始諗，兩小時用得更盡。</p>
       <p class="info">11月8日（星期日）上午10:30 · Chandler's Ford Library, SO53 2LH · 免費</p>
+      <p class="info" style="color:var(--gold); font-weight:700;">⏳ 呢份行動計劃，只喺工作坊前一個星期派發 · 即刻填，即刻攞</p>
       <div class="info-pills">
         <span>📅 2026年11月8日</span>
         <span>⏰ 上午10:30</span>
@@ -666,17 +672,30 @@
         <span>🆓 完全免費</span>
       </div>
 
-      <form class="lead-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='多謝你，已收到你嘅資料！';">
+      <div class="t-card" style="max-width:440px; margin:0 auto 18px; text-align:left;">
+        <div class="quote">上一堂嘅黃先生話：「兩個鐘之前我仲驚到唔敢開電腦」</div>
+        <div class="who"><div class="initial">黃</div><div class="name">黃先生 · 第一堂學員</div></div>
+      </div>
+
+      <form class="lead-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='多謝你！行動計劃即刻send緊去你電郵，5 分鐘內收到';">
         <label for="name">你的姓名</label>
         <input id="name" type="text" placeholder="例：陳大文" required>
 
-        <label for="phone">WhatsApp / 電話</label>
-        <input id="phone" type="tel" placeholder="例：07xxx xxxxxx" required>
+        <label for="email">電郵地址</label>
+        <input id="email" type="email" placeholder="例：daaiman@example.com" required>
 
-        <label for="goal">你最想用網頁做咩？</label>
-        <textarea id="goal" placeholder="例：想整個網頁分享我嘅家鄉菜食譜"></textarea>
+        <label for="goal">你最想用網頁做咩？（非必填）</label>
+        <select id="goal">
+          <option value="">未決定，嚟到工作坊先諗</option>
+          <option value="business">小生意主頁</option>
+          <option value="recipe">家傳食譜集 / 個人網站</option>
+          <option value="community">社群 / 教會網站</option>
+          <option value="tool">迷你網頁工具</option>
+          <option value="other">其他</option>
+        </select>
 
         <button type="submit">免費攞行動計劃</button>
+        <div style="text-align:center; margin-top:10px; font-size:0.82rem; color:#6c6c6c;">已經有 50+ 位街坊完成</div>
       </form>
       <p class="form-note">出席便可，唔使報名亦唔使留位 · 我哋只會用嚟聯絡你有關行動計劃同工作坊嘅事宜</p>
     </div>
@@ -690,8 +709,19 @@
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta">
-    <a href="#lead-form">免費留位 · 11月8日</a>
+    <a href="#lead-form">免費攞《兩小時建站行動計劃》</a>
   </div>
+
+  <script>
+    (function(){
+      var target = new Date('2026-11-08T00:00:00');
+      var today = new Date();
+      today.setHours(0,0,0,0);
+      var diff = Math.ceil((target - today) / (1000 * 60 * 60 * 24));
+      var el = document.getElementById('days-left');
+      if (el) el.textContent = diff > 0 ? diff : '0';
+    })();
+  </script>
 
 </body>
 </html>
